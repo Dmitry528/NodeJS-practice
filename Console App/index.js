@@ -1,6 +1,7 @@
 const Person = require("./classes/person");
 const Dog = require("./classes/dog");
 const Cat = require("./classes/cat");
+const Sandwitch = require("./classes/sandwich");
 const args = process.argv;
 //console.log(args); // 0 elem - PATH, 1 elem PATH to our file;
 
@@ -14,6 +15,7 @@ switch (args[2]){
         console.log(`--dog_ability - show Dog ability`);
         console.log(`--create_cat(name, age, breed, legs) : create cat`);
         console.log(`--cat_ability - show Cat ability`);
+        console.log(`--help_am_hungry`);
     break;
 
     case `-v`:
@@ -62,6 +64,24 @@ switch (args[2]){
     case `--cat_ability`:
         const cat_ability = new Cat;
         cat_ability.Ability();
+    break;
+
+    case `--help_am_hungry`:
+        console.log(`Use --create_Sendwitch (bread, cheese, meet)`);
+    break;
+
+    case `--create_Sendwitch`:
+        let kind_bread = args[3];
+        let cheese = args[4];
+        let meet = args[5];
+        const sandwich = new Sandwitch(kind_bread, cheese, meet);
+        sandwich.SendwichConsistOf();
+        console.log(`use --eat_this`);
+    break;
+
+    case `--eat_this`: 
+        const eat_sandwitch = new Sandwitch;
+        eat_sandwitch.EatSendwitch();
     break;
 
     default:
