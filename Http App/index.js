@@ -30,7 +30,9 @@ const server = http.createServer((req, res) => {
     }
     else{
         res.setHeader("Content-Type", "text/html");
-
+        const notFound = require(`./modules/notFound`);
+        let notfound = new notFound;
+        notfound.ShowInfo(res);
         res.end();
     }
 });

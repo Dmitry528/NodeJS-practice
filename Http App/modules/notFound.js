@@ -1,4 +1,4 @@
-class ContactPage {
+class NotFound {
     constructor() {
         /* helpers */
         let center = `style = "text-align: center;"`;
@@ -20,7 +20,7 @@ class ContactPage {
 
         this.headStart = `<head>`;
 
-        this.title = `<title> Contact Page </title>`;
+        this.title = `<title> 404 Not Found </title>`;
 
         this.headEnd = `</head>`
 
@@ -28,11 +28,12 @@ class ContactPage {
 
         this.bodyStart = `<body>`;
 
-        this.capture = ` <h1 ${center}> This is a page CONTACT </h1>`;
-        this.text = `<p ${center}> This is a about page of our Contact servise </p>`
+        this.capture = ` <h1 ${center}> 404 - Not Found </h1>`;
+        this.text = `<p ${center}> Please click to link under </p>`
 
         this.linkHome = `<a href = "${homePage}" ${blockCenter}>Home page</a> ${br}`;
         this.linkAbout = `<a href = "${aboutPage}" ${blockCenter}>About page</a> ${br}`;
+        this.linkContact = `<a href = "${contactPage}" ${blockCenter}>Contact page</a> ${br}`;
 
         this.bodyEnd = `</body>`;
 
@@ -53,9 +54,10 @@ class ContactPage {
         res.write(`${this.text}`);
         res.write(`${this.linkHome}`);
         res.write(`${this.linkAbout}`);
+        res.write(`${this.linkContact}`);
 
-        res.write(`${this.bodyEnd}`)
+        res.write(`${this.bodyEnd}`);
     }
 }
 
-module.exports = ContactPage;
+module.exports = NotFound;
