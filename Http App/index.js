@@ -15,13 +15,16 @@ const server = http.createServer((req, res) => {
         res.setHeader("Content-Type", "text/html");
         
         const AboutInfo = require("./modules/about");
-        let About = new AboutInfo();
+        let About = new AboutInfo;
         About.ShowInfo(res);
 
         res.end();
     }
     else if(url === `/contact`){
         res.setHeader("Content-Type", "text/html");
+        const AboutContact = require(`./modules/contact`);
+        let contact = new AboutContact;
+        contact.ShowInfo(res);
 
         res.end();
     }

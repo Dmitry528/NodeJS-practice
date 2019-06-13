@@ -54,7 +54,7 @@ class HomePage{
         res.write(`${this.linkAbout}`);
         res.write(`${this.linkContact}`);
 
-        res.write(`${this.bodyEnd}`)
+        res.write(`${this.bodyEnd}`);
     }
 }
 
