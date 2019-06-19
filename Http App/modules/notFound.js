@@ -1,5 +1,5 @@
-class HomePage{
-    constructor(){
+class NotFound {
+    constructor() {
         /* helpers */
         let center = `style = "text-align: center;"`;
         let left = `style = "text-align: left;"`;
@@ -9,7 +9,7 @@ class HomePage{
 
         let br = `<br>`;
         /* end helpers */
-        
+
         /* url */
 
         let homePage = "http://localhost:3000/";
@@ -20,7 +20,7 @@ class HomePage{
 
         this.headStart = `<head>`;
 
-        this.title = `<title> Home Page </title>`;
+        this.title = `<title> 404 Not Found </title>`;
 
         this.headEnd = `</head>`
 
@@ -28,16 +28,17 @@ class HomePage{
 
         this.bodyStart = `<body>`;
 
-        this.capture = ` <h1 ${center}> Hello this is Home page </h1>`;
-        this.text = `<p ${center}> This is a main page of our server, please check another pages</p>`
+        this.capture = ` <h1 ${center}> 404 - Not Found </h1>`;
+        this.text = `<p ${center}> Please click to link under </p>`
 
+        this.linkHome = `<a href = "${homePage}" ${blockCenter}>Home page</a> ${br}`;
         this.linkAbout = `<a href = "${aboutPage}" ${blockCenter}>About page</a> ${br}`;
         this.linkContact = `<a href = "${contactPage}" ${blockCenter}>Contact page</a> ${br}`;
 
         this.bodyEnd = `</body>`;
 
     }
-    ShowInfo(res){
+    ShowInfo(res) {
         res.write(`${this.headStart}`);
 
         res.write(`${this.title}`);
@@ -51,6 +52,7 @@ class HomePage{
 
         res.write(`${this.capture}`);
         res.write(`${this.text}`);
+        res.write(`${this.linkHome}`);
         res.write(`${this.linkAbout}`);
         res.write(`${this.linkContact}`);
 
@@ -58,4 +60,4 @@ class HomePage{
     }
 }
 
-module.exports = HomePage;
+module.exports = NotFound;
