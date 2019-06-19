@@ -1,0 +1,5 @@
+{
+  "title": "NOT FOUND 404",
+  "capture": "Its a 404 our site",
+  "text": "I create this page with PUG and NODE JS"
+}
