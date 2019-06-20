@@ -4,11 +4,15 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title #{title}
+        title Admin Page
         link(rel='stylesheet', href='css/main.css')
     body
-        h1.title #{h1}
-        p.text #{p}
+        form(method='POST' action='/admin')
+            input(type='text', placeholder='titlePage' name='titlePage')
+            input(type='text', placeholder='capture' name='capture')
+            input(type='text', placeholder='textpl' name='textpl')
+
+            button.btn.btn-primary(type='submit') accept
         ul.toflx
             li
                 a(href="http://localhost:3000/about") About

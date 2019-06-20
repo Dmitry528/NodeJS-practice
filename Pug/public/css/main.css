@@ -8,3 +8,18 @@
     font-weight: bold;
     text-align: center;
 }
+.toflx{
+    display: flex;
+    list-style:  none;
+    justify-content: space-around;
+    font-size: 45px;
+}
+
+.toflx li a {
+    color: black;
+    text-decoration: none;
+    padding: 25px;
+}
+.toflx li a:hover {
+    border-bottom: 3px solid black;
+}
