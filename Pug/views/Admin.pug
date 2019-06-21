@@ -7,14 +7,16 @@ html(lang="en")
         title Admin Page
         link(rel='stylesheet', href='css/main.css')
     body
-        form(method='POST' action='/admin')
-            input(type='text', placeholder='titlePage' name='titlePage')
-            input(type='text', placeholder='capture' name='capture')
-            input(type='text', placeholder='textpl' name='textpl')
+        div.container
+            h1 Its ADMIN page, Please enter data
+            form(method='POST' action='/admin')
+                input(type='text', placeholder='Title of Page' name='titlePage')
+                input(type='text', placeholder='First Capture on Page ' name='capture')
+                input(type='text', placeholder='Text under Capture' name='textpl')
 
-            button.btn.btn-primary(type='submit') accept
+                button.btn.btn-primary(type='submit') accept
         ul.toflx
             li
+                a(href="http://localhost:3000/") Home
                 a(href="http://localhost:3000/about") About
                 a(href="http://localhost:3000/contact") Contact
-                a(href="http://localhost:3000/admin") Admin
